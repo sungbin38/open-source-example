@@ -18,6 +18,11 @@ export default function Home() {
             <Button variant="contained">Reach</Button>
           </Link>
         </Grid>
+        <Grid item>
+          <Link href={"/react-spring"}>
+            <Button variant="contained">React Spring</Button>
+          </Link>
+        </Grid>
       </Grid>
     </Box>
   );

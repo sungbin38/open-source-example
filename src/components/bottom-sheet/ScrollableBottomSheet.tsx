@@ -21,6 +21,7 @@ const ScrollableBottomSheet: React.FC<ScrollableBottomSheetProps> = (props) => {
           maxHeight * 0.6,
         ]}
         expandOnContentDrag
+        header={<Header />}
       >
         <SheetContent>
           <Button
@@ -38,6 +39,11 @@ const ScrollableBottomSheet: React.FC<ScrollableBottomSheetProps> = (props) => {
 
 const SheetContent = styled.div`
   margin: 10px;
+`;
+const Header = styled.div`
+  width: 100%;
+  height: 20px;
+  background: cadetblue;
 `;
 
 export default ScrollableBottomSheet;

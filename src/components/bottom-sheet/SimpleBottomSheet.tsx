@@ -12,6 +12,10 @@ const SimpleBottomSheet: React.FC<SimpleBottomSheetProps> = (props) => {
     setOpen(false);
   };
 
+  const header = () => {
+    return <Header />;
+  };
+
   return (
     <Wrapper>
       <Button variant={"contained"} onClick={() => setOpen(true)}>
@@ -20,6 +24,7 @@ const SimpleBottomSheet: React.FC<SimpleBottomSheetProps> = (props) => {
       <BottomSheet
         open={open}
         onDismiss={onDismiss}
+        header={<Header />}
         // snapPoints={({ minHeight }) => minHeight}
       >
         <SheetContent>
@@ -51,5 +56,10 @@ const Expandable = styled.details``;
 const ExpandContent = styled.div``;
 const SampleDiv = styled.div`
   height: 300px;
+`;
+const Header = styled.div`
+  width: 100%;
+  height: 20px;
+  background: cadetblue;
 `;
 export default SimpleBottomSheet;
